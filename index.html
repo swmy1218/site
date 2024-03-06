@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上野悠月のブログ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>MY LIFE</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#timeline">タイムライン</a></li>
+                <li><a href="#contact">連絡先</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="section">
+            <h2>自己紹介</h2>
+            <div class="allinformation">
+                <table>
+                    <tbody>
+                        <tr class="intro2 animate2">
+                            <td class="introdetail">名前</td>
+                            <td class="realintro">上野 悠月</td>
+                        </tr>
+                        <tr class="intro3 animate3">
+                            <td class="introdetail">出身</td>
+                            <td class="realintro">日本, 大阪府</td>
+                        </tr>
+                        <tr class="intro4 animate4">
+                            <td class="introdetail">誕生</td>
+                            <td class="realintro">2006/12/18</td>
+                        </tr>
+                        <tr class="intro5 animate5">
+                            <td class="introdetail">技術</td>
+                            <td class="realintro">プログラミング</td>
+                        </tr>
+                        <tr class="intro6 animate6">
+                            <td class="introdetail">言語</td>
+                            <td class="realintro">日本語, 英語(勉強中), フランス語(勉強中)</td>
+                        </tr>
+                        <tr class="intro7 animate7">
+                            <td class="introdetail">性格</td>
+                            <td class="realintro">温厚で真面目な性格</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section id="timeline" class="timeline-section">
+            <h2>タイムライン</h2>
+            <article>
+                <h3>私の旅 - 生い立ちから現在まで</h3>
+                <p>更新日: <time datetime="2024-03-01">2024年3月6日</time></p>
+                <div class="timeline-container">
+                    <div class="timeline-line" id="timeline-line"></div>
+                    <div id="blogContent"></div>
+                </div>
+            </article>
+        </section>
+        <section id="contact" class="section">
+            <h2>連絡先</h2>
+            <p>ご連絡はこちらから: <a href="mailto:SwMy.H1218@gmail.com">メール</a></p>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2024 上野悠月. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script> <!-- JavaScriptファイルを参照 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var headerHeight = document.querySelector('.site-header').offsetHeight;
+            document.querySelector('.section').style.paddingTop = headerHeight + 'px';
+        });
+    </script>
+</body>
+</html>

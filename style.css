@@ -1,0 +1,161 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%; /* 幅を画面いっぱいに拡張 */
+  height: 100%; /* 必要に応じて高さも指定 */
+}
+
+:root {
+  --primary-color: #8B4513;
+  --secondary-color: #DAA520;
+  --background-color: #F4EAD5;
+  --text-color: #3E2723;
+  --font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--background-color);
+  line-height: 1.6;
+}
+
+.site-header {
+  text-align: center;
+  padding: 10px 0; /* 上下のパディングを減らし、ヘッダーの高さを狭くする */
+  background-color: #2A6478; /* 地中海の青 */
+  color: var(--secondary-color); /* ゴールド色のテキスト */
+  width: 100%; /* ヘッダーの幅を画面いっぱいに拡張 */
+  position: fixed; /* ヘッダーを上部に固定 */
+  top: 0;
+  left: 0; /* 左端からの距離 */
+  right: 0; /* 右端からの距離 */
+  z-index: 1000; /* 他の要素よりも前面に表示 */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #2A6478;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--background-color);
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background-color: var(--secondary-color);
+  color: #2A6478;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+
+  nav ul {
+      flex-direction: column; /* スマートフォン表示ではナビゲーションを縦に並べる */
+      padding: 0;
+  }
+
+  nav ul li {
+      margin: 10px 0; /* 項目間のスペースを調整 */
+  }
+
+  nav ul li a {
+      font-size: 1em; /* スマートフォン表示でのフォントサイズを調整 */
+      padding: 10px;
+  }
+
+  .allinformation table, .allinformation th, .allinformation td {
+      display: block;
+  }
+
+  .allinformation tr {
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 10px; /* 各項目間のスペース */
+  }
+
+  .allinformation td {
+      flex: 1 1 50%; /* 各項目を横に2列で表示 */
+      padding: 5px; /* パディングで余白を調整 */
+  }
+
+  .introdetail {
+      font-weight: bold; /* カテゴリー名を強調 */
+  }
+}
+
+.section, .timeline-section {
+  background: var(--background-color);
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 30px;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  width: 2px;
+  background-color: var(--secondary-color);
+  height: 0;
+}
+
+/* アニメーション */
+.animate2, .animate3, .animate4, .animate5, .animate6, .animate7 {
+  visibility: hidden; /* アニメーション開始前は要素を隠す */
+}
+
+.animate2, .animate3, .animate4, .animate5, .animate6, .animate7 {
+  animation: fadeInScale 0.5s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+  0% {
+      opacity: 0;
+      transform: translateX(-20px) scale(0.95);
+      visibility: visible; /* アニメーション開始時に要素を表示 */
+  }
+  100% {
+      opacity: 1;
+      transform: translateX(0) scale(1);
+      visibility: visible;
+  }
+}
+
+.section {
+  margin-top: 70px; /* ヘッダーの高さ+余白 */
+  background: var(--background-color);
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
